@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visits to Fuller labs geoFences: [XYZ]"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visits to Library geoFences: [XYZ]"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Steps taken since app started: 0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentAddress"
+        android:text="Address: waiting for location..."
+        android:textSize="16sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textStyle="normal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:name="com.example.recognizingactivities.MapsFragment"
+            android:layout_width="match_parent"
+            android:id="@+id/mapContainer"
+            android:layout_height="200dp"/>
+
+    <ImageView
+        android:id="@+id/activityImage"
+        android:layout_height="250dp"
+        android:layout_width="250dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/still"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+<!--    TODO: To replace this with a Toast-->
+    <TextView
+        android:id="@+id/activityText"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/still"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchActivityTransition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity Transition"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        />
+
+</LinearLayout>
